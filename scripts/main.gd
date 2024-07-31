@@ -48,9 +48,17 @@ func _unhandled_input(event):
 			process_choice(right_item)
 
 func process_choice(chosen_item):
-	# Placeholder: We'll implement proper scoring later
+	# Update this function in main.gd
 	current_score += 10
 	ui.update_score(current_score)
+	
+	# Interact with the character
+	# Assuming chosen_item has a 'name' property. If not, we'll need to adjust this.
+	character.react_to_choice(chosen_item.name)
+	
+	# For now, let's assume all choices increase comfort by 10
+	character.update_comfort(10)
+	
 	end_turn()
 
 func end_turn():
