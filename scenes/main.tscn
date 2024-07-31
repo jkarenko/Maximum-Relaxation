@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://b712teuhvfgj2"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_cdt5q"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_cdt5q")
+
+[node name="CountdownTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="LeftItem" type="Node2D" parent="."]
+
+[node name="RightItem" type="Node2D" parent="."]
+
+[node name="UI" type="Node2D" parent="."]
+
+[connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]
